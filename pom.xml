@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.codehaus.mojo</groupId>
-  <artifactId>my-project</artifactId>
+  <artifactId>hangman</artifactId>
   <version>1.0</version>
 <build>
   <plugins>
@@ -19,7 +19,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>com.mypackage.MyClass</mainClass>
+            <mainClass>hangman.Hangman</mainClass>
           </manifest>
         </archive>
       </configuration>
