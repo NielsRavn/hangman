@@ -7,6 +7,15 @@
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>hangman</artifactId>
   <version>1.0</version>
+
+<dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 <build>
   <plugins>
     <plugin>
@@ -19,7 +28,7 @@
           <manifest>
             <addClasspath>true</addClasspath>
             <classpathPrefix>lib/</classpathPrefix>
-            <mainClass>hangman.Hangman</mainClass>
+            <mainClass>main.Hangman</mainClass>
           </manifest>
         </archive>
       </configuration>
