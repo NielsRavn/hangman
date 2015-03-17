@@ -5,7 +5,7 @@
  */
 package main.java;
 
-import main.Hangman;
+import main.java.Hangman;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
