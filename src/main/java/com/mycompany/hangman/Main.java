@@ -5,7 +5,11 @@
  */
 package com.mycompany.hangman;
 
+
 import BLL.WordLogic;
+import DAL.WordFile;
+import java.io.IOException;
+
 
 /**
  *
@@ -13,9 +17,17 @@ import BLL.WordLogic;
  */
 public class Main {
     
-    public static void main(String[] args){
-        WordLogic l = new WordLogic();
-        l.checkChar("heje", 'e');
+
+    public static void main(String[] args) throws IOException{
+        WordFile words = new WordFile();
+        for(int i = 0; i <100; i++){
+            long start = System.currentTimeMillis();
+            String word = words.getRandomWord();
+            long time = System.currentTimeMillis() -start;
+            System.out.println(""+ word + ": " + time);
+        }
     }
     
+
 }
+
