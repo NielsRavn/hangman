@@ -38,22 +38,61 @@ public class WordLogicTest {
     }
 
    
-    
-    /**
-     * Test of checkChar method, of class WordLogic.
-     
     @Test
-    public void testCheckChar() {
-        System.out.println("checkChar");
-        char c = ' ';
-        WordLogic instance = new WordLogic();
-        boolean expResult = false;
-        boolean result = instance.checkChar(c);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+    public void testShowableWord() {
+        String word = "secretword";
+        String charGuess = "r";
+        WordLogic wl = new WordLogic(word);
+        wl.guess(charGuess);
+        String result = wl.showableWord();
+        assertEquals("___r____r_", result);
     }
-*/
-  
+    
+    @Test
+    public void testGuessIsFalse() {
+        String word = "secretword";
+        String charGuess = "b";
+        WordLogic wl = new WordLogic(word);
+        boolean result = wl.guess(charGuess);
+        assertFalse(result);
+    }
+    
+    @Test
+    public void testGuessIsFalseLossOfLife() {
+        String word = "secretword";
+        String charGuess = "b";
+        WordLogic wl = new WordLogic(word);
+        wl.guess(charGuess);
+        int result = wl.getLifes();
+        assertEquals(6, result);
+    }
+    
+    @Test
+    public void testGuessIsTrue() {
+        String word = "secretword";
+        String charGuess = "r";
+        WordLogic wl = new WordLogic(word);
+        boolean result = wl.guess(charGuess);
+        assertTrue(result); 
+    }
+    
+    @Test
+    public void testGuessIsTrueNoLossOfLife () {
+        String word = "secretword";
+        String charGuess = "r";
+        WordLogic wl = new WordLogic(word);
+        wl.guess(charGuess);
+        int result = wl.getLifes();
+        assertEquals(7, result);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
