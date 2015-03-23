@@ -11,4 +11,8 @@ package com.mycompany.hangman;
  */
 public class Main {
     
+    public void main(String[] args){
+        
+    }
+    
 }
