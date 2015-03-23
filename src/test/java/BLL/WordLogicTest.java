@@ -49,7 +49,7 @@ public class WordLogicTest {
         boolean result = instance.checkChar(c);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         assertTrue(true);
     }
 
     /**
@@ -63,7 +63,7 @@ public class WordLogicTest {
         String result = instance.getShowableWord();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(true);
     }
     
 }
