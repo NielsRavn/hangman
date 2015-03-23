@@ -6,6 +6,9 @@
 package BLL;
 
 import java.util.ArrayList;
+import DAL.WordFile;
+import java.io.IOException;
+
 
 /**
  *
@@ -37,6 +40,16 @@ public class WordLogic {
     
     public int getLifes() {
         return lives;
+    }
+   
+    public String getRandomWord(){
+        WordFile wf = new WordFile();
+        try {
+            return wf.getRandomWord();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
     }
     
     public String showableWord() {
