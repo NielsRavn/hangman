@@ -5,14 +5,17 @@
  */
 package com.mycompany.hangman;
 
+import BLL.WordLogic;
+
 /**
  *
  * @author Niels
  */
 public class Main {
     
-    public void main(String[] args){
-        
+    public static void main(String[] args){
+        WordLogic l = new WordLogic();
+        l.checkChar("heje", 'e');
     }
     
 }
