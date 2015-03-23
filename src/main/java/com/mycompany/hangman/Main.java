@@ -5,9 +5,6 @@
  */
 package com.mycompany.hangman;
 
-
-import BLL.WordLogic;
-import DAL.WordFile;
 import java.io.IOException;
 
 
@@ -19,7 +16,7 @@ public class Main {
     
 
     public static void main(String[] args) throws IOException{
-     
+        new Game().startNewGame();
     }
     
 

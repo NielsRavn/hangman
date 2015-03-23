@@ -5,11 +5,25 @@
  */
 package BLL;
 
+import DAL.WordFile;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Niels
  */
 public class WordLogic {
    
+    public String getRandomWord(){
+        WordFile wf = new WordFile();
+        try {
+            return wf.getRandomWord();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
     
 }
