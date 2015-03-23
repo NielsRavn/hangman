@@ -19,13 +19,7 @@ public class Main {
     
 
     public static void main(String[] args) throws IOException{
-        WordFile words = new WordFile();
-        for(int i = 0; i <100; i++){
-            long start = System.currentTimeMillis();
-            String word = words.getRandomWord();
-            long time = System.currentTimeMillis() -start;
-            System.out.println(""+ word + ": " + time);
-        }
+     
     }
     
 

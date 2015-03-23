@@ -37,6 +37,8 @@ public class WordLogicTest {
     public void tearDown() {
     }
 
+   
+    
     /**
      * Test of checkChar method, of class WordLogic.
      
@@ -52,18 +54,6 @@ public class WordLogicTest {
         //fail("The test case is a prototype.");
     }
 */
-    /**
-     * Test of getShowableWord method, of class WordLogic.
-     */
-    @Test
-    public void testGetShowableWord() {
-        System.out.println("getShowableWord");
-        WordLogic instance = new WordLogic();
-        String expResult = "";
-        String result = "";//instance.getShowableWord();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+  
     
 }
