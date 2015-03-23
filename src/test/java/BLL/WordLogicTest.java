@@ -49,6 +49,20 @@ public class WordLogicTest {
     }
     
     @Test
+    public void testShowableWord2() {
+        String word = "secretword";
+        String charGuess = "r";
+        String charGuess2 = "s";
+        String charGuess3 = "d";
+        WordLogic wl = new WordLogic(word);
+        wl.guess(charGuess);
+        wl.guess(charGuess2);
+        wl.guess(charGuess3);
+        String result = wl.showableWord();
+        assertEquals("s__r____rd", result);
+    }
+    
+    @Test
     public void testGuessIsFalse() {
         String word = "secretword";
         String charGuess = "b";

@@ -24,7 +24,6 @@ public class WordLogic {
     public WordLogic(String secretword) {
         secretWord = secretword;
         guesses = new ArrayList<>();
-        showableWord = new StringBuilder();
     }
 
     public boolean guess(String wordGuess) {
@@ -52,7 +51,9 @@ public class WordLogic {
         return null;
     }
     
+    //Virker ikke når der er mere end 1 entry i guess array. Test nr. 2 fejler.
     public String showableWord() {
+        showableWord = new StringBuilder();
         for(Character c : secretWord.toCharArray()) {
             for (String s : guesses) {
                 if(s.equals(c.toString())) {
@@ -64,4 +65,5 @@ public class WordLogic {
         }
         return showableWord.toString();
     }
+    
 }
