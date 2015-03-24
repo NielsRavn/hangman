@@ -46,11 +46,16 @@ public class Game {
     
    private void printProgress(){
        printHangman(wl.getLifes());
+       printGuesses();
        System.out.println(wl.showableWord());
-       
-       
    }
-    
+   
+   private void printGuesses(){
+       System.out.print("Guesses: ");
+       for(String s : wl.getGuesses())
+            System.out.print(s);
+   }
+   
     private void printHangman(int life) {
         switch (life) {
             case 7:
