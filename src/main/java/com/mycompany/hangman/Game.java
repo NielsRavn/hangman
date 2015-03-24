@@ -29,13 +29,13 @@ public class Game {
         if(!wl.isWin()){
             printHangman(0);
             System.out.println("YOU LOSE!!!");
-            System.out.println("The word was: " + wl.getSecretWord());
         }
         else{
             printHangman(wl.getLifes());
             System.out.println("CONGRATULATIONS YOU WON!!!!!!");
-            System.out.println("The word was: " + wl.getSecretWord());
         }
+        System.out.println("The word was: " + wl.getSecretWord());
+        System.out.println("The meaning of the word is: " + wl.getWordDescription());
         System.out.print("Retry? (y/n):");
         String answer = sc.next();
         if(answer.equalsIgnoreCase("y")) startNewGame();
