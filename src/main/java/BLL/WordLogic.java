@@ -21,6 +21,10 @@ public class WordLogic {
     private StringBuilder showableWord;
     private int lives = 7;
 
+    public WordLogic(){
+        secretWord = getRandomWord();
+        guesses = new ArrayList<>();
+    }
     public WordLogic(String secretword) {
         secretWord = secretword;
         guesses = new ArrayList<>();
@@ -66,7 +70,6 @@ public class WordLogic {
             if(!found){
                 showableWord.append("_");
             }
-            
         }
         return showableWord.toString();
     }

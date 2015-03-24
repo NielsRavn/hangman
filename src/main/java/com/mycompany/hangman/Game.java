@@ -18,6 +18,7 @@ public class Game {
     
     public void startNewGame(){
         printIntroduction();
+        wl = new WordLogic();
     }
     
     public void makeGuess(){
@@ -35,6 +36,13 @@ public class Game {
         System.out.println("You have a total of 7 lives before the game ends.");
         System.out.println("Good Luck!");
     }
+    
+   private void printProgress(){
+       printHangman(wl.getLifes());
+       System.out.println(wl.showableWord());
+       
+       
+   }
     
     private void printHangman(int life) {
         switch (life) {
