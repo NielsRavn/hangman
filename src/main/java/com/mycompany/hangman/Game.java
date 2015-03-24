@@ -11,21 +11,27 @@ import java.util.Scanner;
 public class Game {
 
     WordLogic wl;
+    Scanner sc;
     
     public Game(){
-       
+       sc = new Scanner(System.in);
     }
     
     public void startNewGame(){
         printIntroduction();
         wl = new WordLogic();
+        
+        while(wl.getLifes()>0){
+            printProgress();
+            String guess = makeGuess();
+            wl.guess(guess);
+        }
     }
     
-    public void makeGuess(){
-        System.out.println("stuff");
-        Scanner sc = new Scanner(System.in);
+    public String makeGuess(){
+        System.out.println("Your guess: ");
         String guess = sc.next();
-        
+        return guess;
     }
     
     private void printIntroduction(){
