@@ -22,7 +22,7 @@ public class WordLogic {
     private int lives = 7;
 
     public WordLogic(){
-        secretWord = "peter";
+        secretWord = getRandomWord();
         guesses = new ArrayList<>();
     }
     public WordLogic(String secretword) {
