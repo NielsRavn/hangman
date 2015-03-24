@@ -28,6 +28,7 @@ public class Game {
         }
     }
     
+    
     public String makeGuess(){
         System.out.println("Your guess: ");
         String guess = sc.next();

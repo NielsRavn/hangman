@@ -44,6 +44,11 @@ public class WordLogic {
     public int getLifes() {
         return lives;
     }
+    
+    public boolean isWin(){
+        return !showableWord().contains("_");
+    }
+    
    
     public String getRandomWord(){
         WordFile wf = new WordFile();
