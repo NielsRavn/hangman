@@ -31,6 +31,14 @@ public class Game {
             System.out.println("YOU LOSE!!!");
             System.out.println("The word was: " + wl.getSecretWord());
         }
+        else{
+            printHangman(wl.getLifes());
+            System.out.println("CONGRATULATIONS YOU WON!!!!!!");
+            System.out.println("The word was: " + wl.getSecretWord());
+        }
+        System.out.print("Retry? (y/n):");
+        String answer = sc.next();
+        if(answer.equalsIgnoreCase("y")) startNewGame();
     }
     
     
@@ -99,7 +107,7 @@ public class Game {
                 System.out.println("|/      |  ");
                 System.out.println("|      (_) ");
                 System.out.println("|       |/");
-                System.out.println("|       |  ");
+                System.out.println("|          ");
                 System.out.println("|          ");
                 System.out.println("|          ");
                 System.out.println("|___       ");
@@ -109,7 +117,7 @@ public class Game {
                 System.out.println("|/      |  ");
                 System.out.println("|      (_) ");
                 System.out.println("|      \\|/");
-                System.out.println("|       |  ");
+                System.out.println("|          ");
                 System.out.println("|          ");
                 System.out.println("|          ");
                 System.out.println("|___       ");
