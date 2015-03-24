@@ -55,13 +55,18 @@ public class WordLogic {
     public String showableWord() {
         showableWord = new StringBuilder();
         for(Character c : secretWord.toCharArray()) {
+            boolean found = false;
             for (String s : guesses) {
                 if(s.equals(c.toString())) {
                     showableWord.append(s);
-                } else {
-                    showableWord.append("_");
+                    found = true;
+                    break;
                 }
             }
+            if(!found){
+                showableWord.append("_");
+            }
+            
         }
         return showableWord.toString();
     }
