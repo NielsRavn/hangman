@@ -5,9 +5,12 @@
  */
 package BLL;
 
+import DAL.ReadJson;
 import java.util.ArrayList;
 import DAL.WordFile;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -48,6 +51,14 @@ public class WordLogic {
         }
         lives--;
         return false;
+    }
+    
+    public String getWordDescription(){
+        try {
+            return ReadJson.getDescriptionFromWiki(secretWord);
+        } catch (IOException ex) {
+        }
+        return "";
     }
     
     public String getSecretWord(){
