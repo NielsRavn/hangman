@@ -122,17 +122,40 @@ public class WordLogicTest {
         wl.guess("s");
         wl.guess("e");
         wl.guess("c");
-        assertTrue(wl.isWin());
-    
+        assertTrue(wl.isWin());  
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+     @Test
+     public void testGetGuessesSingleChars(){
+        String word = "secretword";
+        WordLogic wl = new WordLogic(word);
+        wl.guess("s");
+        wl.guess("u");
+        
+        assertEquals("s", wl.getGuesses().get(0));
+        assertEquals("u", wl.getGuesses().get(1));
+     }
+     
+     @Test
+     public void testGetGuessesFullWord(){
+        String word = "secretword";
+        WordLogic wl = new WordLogic(word);
+        wl.guess("secretwird");
+        wl.guess("secretwurd");
+        
+        assertEquals("secretwird", wl.getGuesses().get(0));
+        assertEquals("secretwurd", wl.getGuesses().get(1));
+     }
+     
+     @Test(expected = NullPointerException.class)
+     public void testExpectedExceptionGetGuesses(){
+        String word = null;
+        WordLogic wl = new WordLogic(word);
+        wl.guess(null);
+        wl.guess("e");
+        wl.guess("c");
+        assertEquals(null, wl.getGuesses().get(0));
+        assertEquals("e", wl.getGuesses().get(1));
+        assertEquals("c", wl.getGuesses().get(2));
+     }
 }

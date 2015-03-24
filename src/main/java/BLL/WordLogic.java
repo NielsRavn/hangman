@@ -40,9 +40,7 @@ public class WordLogic {
             }
             return true;
         }
-        if(wordGuess.length() > 1){
-           wordGuess = wordGuess.substring(0, 1);
-        }
+        
         guesses.add(wordGuess);
         for(Character c : secretWord.toCharArray()){
             if(c.toString().equals(wordGuess)){
