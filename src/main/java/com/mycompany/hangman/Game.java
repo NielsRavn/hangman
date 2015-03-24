@@ -21,10 +21,15 @@ public class Game {
         printIntroduction();
         wl = new WordLogic();
         
-        while(wl.getLifes()>0){
+        while(wl.getLifes()>0 && !wl.isWin()){
             printProgress();
             String guess = makeGuess();
             wl.guess(guess);
+        }
+        if(!wl.isWin()){
+            printHangman(0);
+            System.out.println("YOU LOSE!!!");
+            System.out.println("The word was: " + wl.getSecretWord());
         }
     }
     

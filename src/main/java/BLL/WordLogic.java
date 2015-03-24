@@ -41,6 +41,10 @@ public class WordLogic {
         return false;
     }
     
+    public String getSecretWord(){
+        return secretWord;
+    }
+    
     public int getLifes() {
         return lives;
     }
