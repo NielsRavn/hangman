@@ -100,6 +100,17 @@ public class WordLogicTest {
         assertEquals(7, result);
     }
     
+    @Test
+    public void testIsWinner(){
+        String word = "secretword";
+        String notCompWord = "s_ee_";
+        WordLogic wl = new WordLogic(word);
+        assertTrue(wl.isWin());
+        WordLogic nwl = new WordLogic(word);
+        assertFalse(nwl.isWin());
+        
+    }
+    
     
     
     
