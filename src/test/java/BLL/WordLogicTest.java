@@ -100,15 +100,30 @@ public class WordLogicTest {
         assertEquals(7, result);
     }
     
-    @Test
+    @Test 
     public void testIsWinner(){
-        String word = "secretword";
-        String notCompWord = "s_ee_";
+        String word = "sec";
         WordLogic wl = new WordLogic(word);
+        wl.guess("s");
+        wl.guess("e");
+        wl.guess("c");
         assertTrue(wl.isWin());
+
         WordLogic nwl = new WordLogic(word);
+        nwl.guess("s");
+        nwl.guess("c");
         assertFalse(nwl.isWin());
-        
+    }
+    
+    @Test(expected = NullPointerException.class)
+    public void ExpectedExceptionIsWinner(){
+        String word = null;
+        WordLogic wl = new WordLogic(word);
+        wl.guess("s");
+        wl.guess("e");
+        wl.guess("c");
+        assertTrue(wl.isWin());
+    
     }
     
     
