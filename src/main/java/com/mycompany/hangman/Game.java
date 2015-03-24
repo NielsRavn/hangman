@@ -6,10 +6,11 @@
 package com.mycompany.hangman;
 
 import BLL.WordLogic;
+import DAL.WordFile;
 import java.util.Scanner;
 
 public class Game {
-
+        
     WordLogic wl;
     Scanner sc;
     
@@ -19,7 +20,7 @@ public class Game {
     
     public void startNewGame(){
         printIntroduction();
-        wl = new WordLogic();
+        wl = new WordLogic(new WordFile());
         
         while(wl.getLifes()>0 && !wl.isWin()){
             printProgress();

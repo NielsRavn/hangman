@@ -5,6 +5,7 @@
  */
 package BLL;
 
+import DAL.IWordFile;
 import DAL.ReadJson;
 import java.util.ArrayList;
 import DAL.WordFile;
@@ -23,10 +24,15 @@ public class WordLogic {
     private ArrayList<String> guesses;
     private StringBuilder showableWord;
     private int lives = 7;
+    IWordFile m_wordFile;
+    
 
-    public WordLogic(){
+
+    public WordLogic(IWordFile m_wordFile){
+        this.m_wordFile = m_wordFile;
         secretWord = getRandomWord();
         guesses = new ArrayList<>();
+        
     }
     public WordLogic(String secretword) {
         secretWord = secretword;
@@ -74,9 +80,10 @@ public class WordLogic {
     }
    
     public String getRandomWord(){
-        WordFile wf = new WordFile();
+        //WordFile wf = new WordFile();
+        
         try {
-            return wf.getRandomWord();
+            return m_wordFile.getRandomWord();
         } catch (IOException ex) {
             ex.printStackTrace();
         }

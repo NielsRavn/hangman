@@ -158,4 +158,11 @@ public class WordLogicTest {
         assertEquals("e", wl.getGuesses().get(1));
         assertEquals("c", wl.getGuesses().get(2));
      }
+     
+     @Test
+     public void testGetNotSoRandomWord(){
+        String word = "sec";
+        WordLogic wl = new WordLogic(word);
+        assertEquals("horse", wl.getRandomWord());
+     }
 }

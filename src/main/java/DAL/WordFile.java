@@ -16,11 +16,11 @@ import java.util.ArrayList;
  *
  * @author Niels
  */
-public class WordFile {
+public class WordFile implements IWordFile {
     
     private final String FILE_PATH = "res/words.txt";
 
-    
+    @Override
     public String getRandomWord() throws FileNotFoundException, IOException{
         ArrayList<String> words = new ArrayList();
         
