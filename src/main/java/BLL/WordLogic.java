@@ -44,6 +44,10 @@ public class WordLogic {
     public int getLifes() {
         return lives;
     }
+    
+    public ArrayList<String> getGuesses(){
+        return guesses;
+    }
    
     public String getRandomWord(){
         WordFile wf = new WordFile();
