@@ -22,7 +22,7 @@ public class WordLogic {
     private int lives = 7;
 
     public WordLogic(){
-        secretWord = getRandomWord();
+        secretWord = "peter";
         guesses = new ArrayList<>();
     }
     public WordLogic(String secretword) {
@@ -31,6 +31,15 @@ public class WordLogic {
     }
 
     public boolean guess(String wordGuess) {
+        if(wordGuess.toLowerCase().equals(secretWord.toLowerCase())){
+            for(char c : wordGuess.toCharArray()){
+                guesses.add(c+"");
+            }
+            return true;
+        }
+        if(wordGuess.length() > 1){
+           wordGuess = wordGuess.substring(0, 1);
+        }
         guesses.add(wordGuess);
         for(Character c : secretWord.toCharArray()){
             if(c.toString().equals(wordGuess)){

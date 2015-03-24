@@ -59,6 +59,7 @@ public class Game {
        System.out.print("Guesses: ");
        for(String s : wl.getGuesses())
             System.out.print(s);
+       System.out.println("");
    }
    
     private void printHangman(int life) {
