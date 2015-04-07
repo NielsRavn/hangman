@@ -13,5 +13,5 @@ import java.io.IOException;
  * @author peter bærbar
  */
 public interface IWordFile {
-    String getRandomWord() throws FileNotFoundException, IOException;
+
 }

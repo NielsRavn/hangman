@@ -87,7 +87,7 @@ public class WordLogic {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return null;
+        return null; 
     }
     
     //Virker ikke når der er mere end 1 entry i guess array. Test nr. 2 fejler.
