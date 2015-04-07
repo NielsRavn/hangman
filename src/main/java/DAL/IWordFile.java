@@ -5,10 +5,15 @@
  */
 package DAL;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  *
  * @author peter bærbar
  */
-public class IWordFile {
+public interface IWordFile {
+
+    public String getRandomWord() throws FileNotFoundException, IOException;
     
 }
