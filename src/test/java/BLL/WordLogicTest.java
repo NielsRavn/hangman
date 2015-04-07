@@ -5,6 +5,8 @@
  */
 package BLL;
 
+import DAL.IWordFile;
+import DAL.MockWordFile;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -161,8 +163,8 @@ public class WordLogicTest {
      
      @Test
      public void testGetNotSoRandomWord(){
-        String word = "sec";
-        WordLogic wl = new WordLogic(word);
+         
+        WordLogic wl = new WordLogic(new MockWordFile());
         assertEquals("horse", wl.getRandomWord());
      }
 }

@@ -9,6 +9,11 @@ package DAL;
  *
  * @author peter bærbar
  */
-public class MockWordFile {
+public class MockWordFile implements IWordFile {
+
+    @Override
+    public String getRandomWord() {
+        return "horse";
+    }
     
 }
